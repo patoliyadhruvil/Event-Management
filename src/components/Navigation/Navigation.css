@@ -1,0 +1,144 @@
+nav {
+  background-color: #1f1f1f; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+}
+
+.nav-logo h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-logo h1:hover {
+  color: #00bfa5;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #00bfa5;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-form input {
+  padding: 8px 12px;
+  border: 2px solid #00bfa5;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-form input:focus {
+  border-color: #ffffff;
+}
+
+.search-form button {
+  padding: 8px 16px;
+  background-color: #00bfa5;
+  border: none;
+  border-radius: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+  background-color: #008e7d;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    background: #ffffff;
+    height: 2px;
+    margin: 4px 0;
+    width: 25px;
+  }
+
+  .nav-open {
+    display: flex;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 100;
+  }
+
+  .nav-open li {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .nav-open a {
+    font-size: 20px;
+    color: #ffffff;
+  }
+
+  .search-form {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .search-form input {
+    width: 80%;
+  }
+
+  .search-form button {
+    width: 100px;
+  }
+}

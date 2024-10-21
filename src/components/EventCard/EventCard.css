@@ -1,0 +1,81 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --text-color: #333;
+  --font-family: 'Arial, sans-serif';
+  --padding: 1rem;
+  --border-radius: 8px;
+}
+
+.event-card {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+.full-screen-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-img-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the image covers the area */
+}
+
+.card-content {
+  padding: var(--padding);
+  background-color: white;
+}
+
+.card-heading {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.card-date {
+  font-size: 1rem;
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between; /* Space between year and month */
+  margin: 0.5rem 0;
+}
+
+.card-location {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+.read-more {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.read-more:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
